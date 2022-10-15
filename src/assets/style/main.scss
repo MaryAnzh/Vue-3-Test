@@ -1,0 +1,145 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600;700&display=swap');
+
+@import "./utils/reset.scss";
+@import "./utils/vareable";
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto';
+    line-height: 1.4;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+    scroll-behavior: smooth;
+
+    @media screen and (max-width: $desktopWidth) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+    }
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+}
+
+#app {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header,
+footer {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    background: $bacgroundDark;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    a {
+        color: white;
+    }
+}
+
+section,
+.section {
+    position: relative;
+    padding: 40px 0;
+
+    @media screen and (max-width: $desktopWidth) {
+        padding: 36px 0;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        padding: 28px 0;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        padding: 20px 0;
+    }
+}
+
+// .wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     min-height: 100vh;
+//     margin: 0 auto;
+// }
+
+// .wrapper-content {
+//     display: flex;
+//     flex-direction: column;
+//     min-height: 70vh;
+//     margin-top: 40px; // if header is fixed do 40px+headerHeight
+// }
+
+// .container {
+//     position: relative;
+//     flex: 0 0 auto;
+//     margin: 0 auto;
+//     width: 100%;
+//     max-width: $lgDesktopWidth;
+
+//     @media screen and (max-width: $lgDesktopWidth) {
+//         padding: 0 16px;
+//     }
+
+//     @media screen and (max-width: $smDesktopWidth) {
+//         max-width: $tableWidth;
+//     }
+
+//     @media screen and (max-width: $tableWidth) {
+//         max-width: $smTableWidth;
+//     }
+
+//     @media screen and (max-width: $smTableWidth) {
+//         max-width: $phoneWidth;
+//     }
+
+//     @media screen and (max-width: $phoneWidth) {
+//         max-width: $smPhoneWidth;
+//     }
+// }
+
+// .view {
+//     width: 100%;
+//     max-width: 700px;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+@import "./common/common";
