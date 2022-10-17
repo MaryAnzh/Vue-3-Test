@@ -17,6 +17,7 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 })
 export default class HomeView extends Vue {
   public message = "Hello Vue 3!";
+
   // data(): { message: string } {
   //   return {
   //     message: "Hello Vue 3!",
