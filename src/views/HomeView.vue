@@ -1,7 +1,8 @@
 <template>
   <h2>Home page</h2>
   <div class="home">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
+    <input type="text" v-on:input="setMessage" />
+    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -14,5 +15,16 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
     HelloWorld,
   },
 })
-export default class HomeView extends Vue {}
+export default class HomeView extends Vue {
+  public message = "Hello Vue 3!";
+  // data(): { message: string } {
+  //   return {
+  //     message: "Hello Vue 3!",
+  //   };
+  // }
+
+  public setMessage(e: { target: { value: string } }): void {
+    this.message = e.target.value;
+  }
+}
 </script>
