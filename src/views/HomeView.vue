@@ -26,6 +26,9 @@ export default class HomeView extends Vue {
 
   public setMessage(e: { target: { value: string } }): void {
     this.message = e.target.value;
+    if (e.target.value === "") {
+      this.message = "Hello Vue 3!";
+    }
   }
 }
 </script>
